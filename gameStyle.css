@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@800&display=swap');
+
+* {
+    font-family: 'Biryani', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #ff6600, #ff9966); /* Radiant orange gradient */
+    overflow: hidden; /* Hide scrollbar */
+}
+
+p {
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+td {
+    background-color: transparent;
+    height: 70px;
+    width: 70px;
+}
+
+td, .inner, .front, .back {
+    border-radius: 4px;
+}
+
+table {
+    margin-top: 80px;
+}
+
+#inst {
+    width: 85vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-top: 16vh;
+    backdrop-filter: blur(10px);
+    border: 0.2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    color: white; /* Instructions text color */
+}
+
+#inst li {
+    text-align: left;
+    padding: 5px;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    margin: 5px;
+    border: 0.1px solid #fff;
+    border-radius: 10px;
+    font-weight: lighter;
+    width: 100px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+button:hover, button:active {
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#ol {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background for overlay */
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iol {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background for the message */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white; /* White text color for the overlay message */
+}
+
+#title {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    margin: 8px;
+    margin-top: 0px;
+    color: white;
+    height: 56px;
+    text-align: center;
+}
+
+#time {
+    position: absolute;
+    right: 20px;
+    font-size: 16px;
+    top: 8.5px;
+}
+
+#moves {
+    position: absolute;
+    left: 20px;
+    font-size: 16px;
+    top: 8.5px;
+}
+
+#logo {
+    font-size: 22px;
+    padding-top: 10px;
+    display: block;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.front {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.back {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
